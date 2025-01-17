@@ -6,13 +6,6 @@ module Decoder(
    output reg [`EX_REG_NUMBER_WIDTH] ins_rd, ins_rs1, ins_rs2,    // reg destination, reg source1, reg source2
    output reg [`DATA_WIDTH] ins_imm                            // ins immediate
 );
-/*
-function [`INS_WIDTH] signed_extend;
-   input [`INS_WIDTH] c;
-   input [`OPE_WIDTH] bit;
-   signed_extend = (bit == 32) ? c : c >> (bit - 1) & 1 ? c | (32'hFFFFFFFF >> bit << bit) : c;
-endfunction
-*/
 always @(*) begin
    ins_type = `EMPTY_INS;
    ins_rd = (code >> 7) & 12'h1F;

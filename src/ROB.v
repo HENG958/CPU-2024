@@ -84,9 +84,6 @@ integer total_pred, right_pred;
 integer i;
 
 always @(posedge clk) begin
-   // $display(head);
-   // $display(tail);
-   // $display(head_maybe_change_reg);
    if (rst || mispredict) begin // clear all
       head <= 0;
       tail <= 0;

@@ -20,7 +20,7 @@ OBJDUMP := $(RISCV_TOOLCHAIN)objdump
 # compile options
 # Link library least support: [ rv32i rv32iac rv32im rv32imac rv32imafc rv64imac rv64imafdc ] if use the given dockerfile(archlinux with riscv64-elf-newlib)
 # other option such as _zicsr might be available as well
-MARCH_STRING := rv32ic
+MARCH_STRING := rv32i
 ABI_STRING := ilp32
 
 AS_FLAGS := -march=$(MARCH_STRING)
